@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'Sander de Laat - Front end developer',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'nl',
     },
     meta: [
       { charset: 'utf-8' },
@@ -35,7 +35,7 @@ export default {
             100: '#3F3935',
             200: '#37312d',
           },
-          pink: '#e4038a',
+          pink: '#d80282',
           'pink-light': '#fc67c0',
         },
       },
