@@ -17,13 +17,12 @@
               />
             </NuxtLink>
           </div>
-          <div class="mx-auto">
-            <NuxtLink class="nav-link" to="/projects">Projecten</NuxtLink>
+          <div class="mx-auto md:ml-auto md:mr-0">
             <NuxtLink class="nav-link" to="/">Contact</NuxtLink>
             <NuxtLink class="nav-link" to="/">Blog</NuxtLink>
           </div>
 
-          <div class="mx-auto mt-2 md:ml-auto md:mr-0 md:mt-0">
+          <div class="mx-auto mt-2 md:ml-2 md:mr-0 md:mt-0">
             <a class="icon-nav-link mr-2" href="https://github.com/Sanderdl">
               <svg
                 role="img"
@@ -60,13 +59,13 @@
   </div>
 </template>
 
-<style>
+<style lang="postcss">
 body {
   @apply text-gray-200;
 }
 
 .nav-link {
-  @apply inline-block px-1 py-1 mx-1 uppercase text-xs font-semibold text-gray-200 border-b-2 border-white-100 box-border align-middle md:mx-5 md:px-3;
+  @apply inline-block px-1 py-1 mx-1 uppercase text-xs font-semibold text-gray-200 border-b-2 border-white-100 box-border align-middle md:mx-3 md:px-3;
 }
 
 .nav-link:hover {
@@ -96,14 +95,14 @@ body {
   outline-color: #e4038a;
 }
 
-h1 {
+.title {
   @apply text-pink mt-3 md:mt-8;
 
   font-weight: bold;
   font-size: 2rem;
 }
 
-h2 {
+.bold-title {
   @apply text-2xl;
 
   font-weight: bold;

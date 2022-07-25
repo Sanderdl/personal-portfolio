@@ -1,4 +1,5 @@
 ---
+sortKey: 2
 title: Observ 320
 image: /projects/320/thumb
 description: iOS app om de Observ 320 te besturen

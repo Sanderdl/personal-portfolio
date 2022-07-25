@@ -1,4 +1,5 @@
 ---
+sortKey: 1
 title: Observ 520x
 image: /projects/520x/thumb
 description: iOS app om de Observ 520x te besturen

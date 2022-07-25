@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
 .nuxt-content h1 {
   @apply text-pink mt-8;
 
