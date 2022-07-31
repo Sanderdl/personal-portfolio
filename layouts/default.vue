@@ -1,8 +1,13 @@
 <template>
   <div class="bg-white-200 px-2 py-2 md:px-5 md:py-5 box-border h-screen">
-    <main
+    <div
       class="flex flex-col bg-white-100 px-3 py-2 md:px-5 md:py-3 h-full mx-auto shadow-2xl xl:max-w-5xl rounded-md"
     >
+      <a
+        href="#main_content"
+        class="nav-main-content p-4 bg-gray-200 text-white-100 absolute top-0 left-2 rounded-b-md"
+        >Navigatie overslaan</a
+      >
       <header class="mb-2 md:mb-4">
         <nav class="flex flex-col md:flex-row">
           <div class="mx-auto md:mx-0">
@@ -64,13 +69,22 @@
         </nav>
       </header>
       <Nuxt tabindex="-1" class="grow overflow-y-auto" />
-    </main>
+    </div>
   </div>
 </template>
 
 <style lang="postcss">
 body {
   @apply text-gray-200;
+}
+
+.nav-main-content {
+  transform: translateY(-120%);
+  transition: transform 200ms;
+}
+
+.nav-main-content:focus {
+  transform: translateY(0);
 }
 
 #logo_main:focus {

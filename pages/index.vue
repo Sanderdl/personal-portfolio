@@ -1,6 +1,6 @@
 <template>
-  <div lang="nl">
-    <section class="text-center p-8">
+  <main lang="nl">
+    <section id="main_content" class="text-center p-8">
       <h1 class="visually-hidden">Over mij</h1>
       <p class="text-4xl title">Front end developer bij Innofaith</p>
       <p class="my-4 mb-8 bold-title">Mobile en web development</p>
@@ -14,7 +14,7 @@
         decoding="async"
       />
     </section>
-    <section>
+    <section id="main_content">
       <h2 class="bold-title mb-2 md:mb-6">Projecten</h2>
       <ul>
         <li v-for="(project, index) of projects" :key="project.slug">
@@ -54,7 +54,7 @@
         </li>
       </ul>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
