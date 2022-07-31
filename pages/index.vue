@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div lang="nl">
     <section class="text-center p-8">
-      <h1 class="hidden">Over mij</h1>
-      <header class="text-4xl title">Front end developer bij Innofaith</header>
+      <h1 class="visually-hidden">Over mij</h1>
+      <p class="text-4xl title">Front end developer bij Innofaith</p>
       <p class="my-4 mb-8 bold-title">Mobile en web development</p>
       <img
         class="mx-auto rounded-full object-cover"
@@ -19,15 +19,16 @@
       <ul>
         <li v-for="(project, index) of projects" :key="project.slug">
           <article class="project-card">
-            <picture class="project-img">
+            <picture class="project-img rounded">
               <source :srcset="`${project.image}.webp`" type="image/webp" />
               <source :srcset="`${project.image}.jpg`" type="image/jpeg" />
               <img
+                class="rounded"
                 :src="`${project.image}.jpg`"
                 :alt="`Thumbnail voor ${project.title}`"
                 height="500"
                 width="500"
-                :loading="index > 2 ? 'lazy' : ''"
+                :loading="index > 1 ? 'lazy' : ''"
                 decoding="async"
               />
             </picture>
@@ -40,7 +41,11 @@
                 }}</span>
               </div>
               <div class="mt-8">
-                <NuxtLink :to="{ path: project.path }" class="project-link">
+                <NuxtLink
+                  :to="{ path: project.path }"
+                  :aria-label="`Ga naar de pagina van ${project.title}`"
+                  class="project-link"
+                >
                   Bekijk project
                 </NuxtLink>
               </div>
@@ -93,8 +98,7 @@ export default {
 }
 
 .project-link:focus {
-  @apply focus:opacity-50;
-
-  outline: none;
+  outline: 2px solid #37312d;
+  outline-offset: 5px;
 }
 </style>

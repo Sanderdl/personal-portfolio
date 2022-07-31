@@ -6,14 +6,18 @@
       <header class="mb-2 md:mb-4">
         <nav class="flex flex-col md:flex-row">
           <div class="mx-auto md:mx-0">
-            <NuxtLink id="logo_main" to="/">
+            <NuxtLink
+              id="logo_main"
+              aria-label="link naar de home pagina"
+              to="/"
+            >
               <img
                 class="block mb-4 md:inline-block"
                 style="height: 20px; width: 146px"
                 height="20"
                 width="146"
                 src="~/assets/logo.svg"
-                alt="Logo"
+                alt="Logo van deze website. Er staat 'Sander de Laat' in roze letters"
               />
             </NuxtLink>
           </div>
@@ -23,7 +27,11 @@
           </div>
 
           <div class="mx-auto mt-2 md:ml-2 md:mr-0 md:mt-0">
-            <a class="icon-nav-link mr-2" href="https://github.com/Sanderdl">
+            <a
+              class="icon-nav-link mr-2"
+              aria-label="Link naar de Github pagina van Sander de Laat"
+              href="https://github.com/Sanderdl"
+            >
               <svg
                 role="img"
                 viewBox="0 0 24 24"
@@ -38,6 +46,7 @@
             <a
               id="linkedin_icon"
               class="icon-nav-link"
+              aria-label="Link naar de LinkedIn pagina van Sander de Laat"
               href="https://www.linkedin.com/in/sander-de-laat-654092b/"
             >
               <svg
@@ -64,6 +73,11 @@ body {
   @apply text-gray-200;
 }
 
+#logo_main:focus {
+  outline: 2px solid #37312d;
+  outline-offset: 5px;
+}
+
 .nav-link {
   @apply inline-block px-1 py-1 mx-1 uppercase text-xs font-semibold text-gray-200 border-b-2 border-white-100 box-border align-middle md:mx-3 md:px-3;
 }
@@ -73,7 +87,8 @@ body {
 }
 
 .nav-link:focus {
-  outline-color: #e4038a;
+  outline: 2px solid #37312d;
+  outline-offset: 5px;
 }
 
 .icon-nav-link {
@@ -91,8 +106,8 @@ body {
 .icon-nav-link:focus {
   @apply bg-pink;
 
-  outline-style: solid;
-  outline-color: #e4038a;
+  outline: 2px solid #37312d;
+  outline-offset: 5px;
 }
 
 .title {
@@ -106,5 +121,17 @@ body {
   @apply text-2xl;
 
   font-weight: bold;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 </style>
