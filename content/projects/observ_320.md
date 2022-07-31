@@ -1,4 +1,5 @@
 ---
+sortKey: 2
 title: Observ 320
 image: /projects/320/thumb
 description: iOS app om de Observ 320 te besturen
@@ -12,7 +13,7 @@ tags:
 
 # Observ 320
 
-<p>
+<p id="main_content">
     De Observ kan detaileerde foto's van de huid nemen. Via de 320 app kunnen deze vervolgens uitgebreid geanalyseerd worden.
 </p>
 
@@ -28,4 +29,4 @@ In het analyse scherm kunnen gezichts foto's bekeken worden. Waar nodig kunnen h
  Het rapport is een uitgebreid overzicht van de huidanalyse, dat met een klant van een salon gedeeld kan worden.
 </p>
 
-![Het analyse scherm](/projects/320/report.jpg)
+![Het report scherm met alle gegevens van een sessie](/projects/320/report.jpg)

@@ -1,30 +1,42 @@
 <template>
   <div class="bg-white-200 px-2 py-2 md:px-5 md:py-5 box-border h-screen">
-    <main
+    <div
       class="flex flex-col bg-white-100 px-3 py-2 md:px-5 md:py-3 h-full mx-auto shadow-2xl xl:max-w-5xl rounded-md"
     >
+      <a
+        href="#main_content"
+        class="nav-main-content p-4 bg-gray-200 text-white-100 absolute top-0 left-2 rounded-b-md"
+        >Navigatie overslaan</a
+      >
       <header class="mb-2 md:mb-4">
         <nav class="flex flex-col md:flex-row">
           <div class="mx-auto md:mx-0">
-            <NuxtLink id="logo_main" to="/">
+            <NuxtLink
+              id="logo_main"
+              aria-label="link naar de home pagina"
+              to="/"
+            >
               <img
                 class="block mb-4 md:inline-block"
                 style="height: 20px; width: 146px"
                 height="20"
                 width="146"
                 src="~/assets/logo.svg"
-                alt="Logo"
+                alt="Logo van deze website. Er staat 'Sander de Laat' in roze letters"
               />
             </NuxtLink>
           </div>
-          <div class="mx-auto">
-            <NuxtLink class="nav-link" to="/projects">Projecten</NuxtLink>
+          <div class="mx-auto md:ml-auto md:mr-0">
             <NuxtLink class="nav-link" to="/">Contact</NuxtLink>
             <NuxtLink class="nav-link" to="/">Blog</NuxtLink>
           </div>
 
-          <div class="mx-auto mt-2 md:ml-auto md:mr-0 md:mt-0">
-            <a class="icon-nav-link mr-2" href="https://github.com/Sanderdl">
+          <div class="mx-auto mt-2 md:ml-2 md:mr-0 md:mt-0">
+            <a
+              class="icon-nav-link mr-2"
+              aria-label="Link naar de Github pagina van Sander de Laat"
+              href="https://github.com/Sanderdl"
+            >
               <svg
                 role="img"
                 viewBox="0 0 24 24"
@@ -39,6 +51,7 @@
             <a
               id="linkedin_icon"
               class="icon-nav-link"
+              aria-label="Link naar de LinkedIn pagina van Sander de Laat"
               href="https://www.linkedin.com/in/sander-de-laat-654092b/"
             >
               <svg
@@ -56,17 +69,31 @@
         </nav>
       </header>
       <Nuxt tabindex="-1" class="grow overflow-y-auto" />
-    </main>
+    </div>
   </div>
 </template>
 
-<style>
+<style lang="postcss">
 body {
   @apply text-gray-200;
 }
 
+.nav-main-content {
+  transform: translateY(-120%);
+  transition: transform 200ms;
+}
+
+.nav-main-content:focus {
+  transform: translateY(0);
+}
+
+#logo_main:focus {
+  outline: 2px solid #37312d;
+  outline-offset: 5px;
+}
+
 .nav-link {
-  @apply inline-block px-1 py-1 mx-1 uppercase text-xs font-semibold text-gray-200 border-b-2 border-white-100 box-border align-middle md:mx-5 md:px-3;
+  @apply inline-block px-1 py-1 mx-1 uppercase text-xs font-semibold text-gray-200 border-b-2 border-white-100 box-border align-middle md:mx-3 md:px-3;
 }
 
 .nav-link:hover {
@@ -74,7 +101,8 @@ body {
 }
 
 .nav-link:focus {
-  outline-color: #e4038a;
+  outline: 2px solid #37312d;
+  outline-offset: 5px;
 }
 
 .icon-nav-link {
@@ -92,20 +120,32 @@ body {
 .icon-nav-link:focus {
   @apply bg-pink;
 
-  outline-style: solid;
-  outline-color: #e4038a;
+  outline: 2px solid #37312d;
+  outline-offset: 5px;
 }
 
-h1 {
+.title {
   @apply text-pink mt-3 md:mt-8;
 
   font-weight: bold;
   font-size: 2rem;
 }
 
-h2 {
+.bold-title {
   @apply text-2xl;
 
   font-weight: bold;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 </style>

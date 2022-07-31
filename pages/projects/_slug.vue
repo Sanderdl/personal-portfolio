@@ -1,7 +1,7 @@
 <template>
-  <article>
+  <main>
     <nuxt-content :document="project" />
-  </article>
+  </main>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
 .nuxt-content h1 {
   @apply text-pink mt-8;
 

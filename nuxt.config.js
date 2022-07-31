@@ -6,12 +6,17 @@ export default {
   head: {
     title: 'Sander de Laat - Front end developer',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'nl',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Mijn naam is Sander de Laat en ik ben een frontend developer bij Innofaith. Ik hou mij bezig met mobile en web development',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -35,10 +40,20 @@ export default {
             100: '#3F3935',
             200: '#37312d',
           },
-          pink: '#e4038a',
+          pink: '#d80282',
           'pink-light': '#fc67c0',
         },
       },
+    },
+  },
+  generate: {
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content({ deep: true }).only(['path']).fetch()
+      const mappedfiles = files.map((file) =>
+        file.path === '/index' ? '/' : file.path
+      )
+      return mappedfiles.filter((file) => file === '/projects')
     },
   },
 

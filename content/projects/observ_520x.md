@@ -1,4 +1,5 @@
 ---
+sortKey: 1
 title: Observ 520x
 image: /projects/520x/thumb
 description: iOS app om de Observ 520x te besturen
@@ -12,7 +13,7 @@ tags:
 
 # Observ 520x
 
-<p>
+<p id="main_content">
     De Observ kan detaileerde foto's van de huid nemen. Via de 520x app kunnen deze vervolgens uitgebreid geanalyseerd worden.
 </p>
 
@@ -28,4 +29,4 @@ In het analyse scherm kunnen gezichts foto's bekeken worden. Waar nodig kunnen h
  Het rapport is een uitgebreid overzicht van de huidanalyse, dat met een klant van een salon gedeeld kan worden.
 </p>
 
-![Het analyse scherm](/projects/520x/report.jpg)
+![Het report scherm met alle gegevens van een sessie](/projects/520x/report.jpg)
