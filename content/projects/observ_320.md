@@ -13,7 +13,7 @@ tags:
 
 # Observ 320
 
-<p>
+<p id="main_content">
     De Observ kan detaileerde foto's van de huid nemen. Via de 320 app kunnen deze vervolgens uitgebreid geanalyseerd worden.
 </p>
 

@@ -13,7 +13,7 @@ tags:
 
 # Observ 520x
 
-<p>
+<p id="main_content">
     De Observ kan detaileerde foto's van de huid nemen. Via de 520x app kunnen deze vervolgens uitgebreid geanalyseerd worden.
 </p>
 

@@ -13,7 +13,7 @@ tags:
 
 # Sylton Connect Portal
 
-<p>
+<p id="main_content">
 Een web portaal waar klanten en sessies van verschillende Observ modellen bekeken kunnen worden. Veel functies van de apps werken ook in dit portaal.
 </p>
 
