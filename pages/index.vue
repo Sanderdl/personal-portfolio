@@ -4,9 +4,11 @@
       <h1 class="visually-hidden">Over mij</h1>
       <p class="text-4xl title">Front end developer bij Innofaith</p>
       <p class="my-4 mb-8 bold-title">Mobile en web development</p>
-      <img
+      <nuxt-img
+        format="webp"
+        quality="80"
         class="mx-auto rounded-full object-cover"
-        src="~/assets/images/foto_sander.jpg"
+        src="/images/foto_sander.jpg"
         style="height: 139px"
         alt="Een foto van Sander de Laat"
         height="139"
