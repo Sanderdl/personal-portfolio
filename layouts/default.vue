@@ -5,14 +5,14 @@
     <div
       class="flex flex-col bg-white-100 dark:bg-gray-200 px-3 py-2 md:px-5 md:py-3 h-full mx-auto shadow-2xl xl:max-w-5xl rounded-md"
     >
-      <header class="mb-2 md:mb-4">
-        <nav class="flex flex-col md:flex-row">
+      <header class="flex mb-2 md:mb-4">
+        <nav class="w-full ml-auto flex flex-col md:flex-row md:ml-0">
           <a
             href="#main_content"
             class="nav-main-content p-4 bg-gray-200 text-white-100 absolute top-0 left-2 rounded-b-md"
             >Navigatie overslaan</a
           >
-          <div class="mx-auto md:mx-0">
+          <div class="mx-auto md:mr-auto md:ml-0">
             <NuxtLink
               id="logo_main"
               aria-label="link naar de home pagina"
@@ -39,7 +39,7 @@
             </ul>
           </div>
 
-          <div class="mx-auto mt-2 md:ml-2 md:mr-0 md:mt-0">
+          <div class="mx-auto mt-2 md:ml-2 md:mr-8 md:mt-0">
             <a
               class="icon-nav-link mr-2"
               aria-label="Link naar de Github pagina van Sander de Laat"
@@ -75,7 +75,7 @@
             </a>
           </div>
         </nav>
-        <dark-mode-toggle />
+        <dark-mode-toggle class="ml-auto" />
       </header>
       <Nuxt tabindex="-1" class="grow overflow-y-auto" />
     </div>
