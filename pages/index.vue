@@ -16,7 +16,7 @@
         decoding="async"
       />
     </section>
-    <section id="main_content">
+    <section>
       <h2 class="bold-title mb-2 md:mb-6">Projecten</h2>
       <ul>
         <li v-for="(project, index) of projects" :key="project.slug">
@@ -84,7 +84,7 @@ export default {
 }
 
 .project-info {
-  @apply absolute text-sm p-3 text-gray-200 bg-gradient-to-b from-white-100 to-transparent top-0 left-0 right-0 md:bg-none md:relative md:w-1/2 md:px-6 md:py-0;
+  @apply absolute text-sm p-3 text-gray-200 dark:text-white-100 bg-gradient-to-b from-white-100 to-transparent top-0 left-0 right-0 md:bg-none md:relative md:w-1/2 md:px-6 md:py-0;
 }
 
 .tag {
@@ -97,10 +97,5 @@ export default {
 
 .project-link {
   @apply bg-pink text-white-100 py-1 px-2 rounded hover:bg-pink-light;
-}
-
-.project-link:focus {
-  outline: 2px solid #37312d;
-  outline-offset: 5px;
 }
 </style>

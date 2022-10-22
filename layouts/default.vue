@@ -1,15 +1,17 @@
 <template>
-  <div class="bg-white-200 px-2 py-2 md:px-5 md:py-5 box-border h-screen">
+  <div
+    class="bg-white-200 dark:bg-gray-100 px-2 py-2 md:px-5 md:py-5 box-border h-screen"
+  >
     <div
-      class="flex flex-col bg-white-100 px-3 py-2 md:px-5 md:py-3 h-full mx-auto shadow-2xl xl:max-w-5xl rounded-md"
+      class="flex flex-col bg-white-100 dark:bg-gray-200 px-3 py-2 md:px-5 md:py-3 h-full mx-auto shadow-2xl xl:max-w-5xl rounded-md"
     >
-      <a
-        href="#main_content"
-        class="nav-main-content p-4 bg-gray-200 text-white-100 absolute top-0 left-2 rounded-b-md"
-        >Navigatie overslaan</a
-      >
       <header class="mb-2 md:mb-4">
         <nav class="flex flex-col md:flex-row">
+          <a
+            href="#main_content"
+            class="nav-main-content p-4 bg-gray-200 text-white-100 absolute top-0 left-2 rounded-b-md"
+            >Navigatie overslaan</a
+          >
           <div class="mx-auto md:mx-0">
             <NuxtLink
               id="logo_main"
@@ -27,8 +29,14 @@
             </NuxtLink>
           </div>
           <div class="mx-auto md:ml-auto md:mr-0">
-            <NuxtLink class="nav-link" to="/">Contact</NuxtLink>
-            <NuxtLink class="nav-link" to="/">Blog</NuxtLink>
+            <ul class="flex">
+              <li>
+                <NuxtLink class="nav-link" to="/">Contact</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink class="nav-link" to="/">Blog</NuxtLink>
+              </li>
+            </ul>
           </div>
 
           <div class="mx-auto mt-2 md:ml-2 md:mr-0 md:mt-0">
@@ -67,15 +75,28 @@
             </a>
           </div>
         </nav>
+        <dark-mode-toggle />
       </header>
       <Nuxt tabindex="-1" class="grow overflow-y-auto" />
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return { isDark: false }
+  },
+}
+</script>
+
 <style lang="postcss">
+*:focus-visible {
+  @apply outline-2 outline-pink outline-offset-4;
+}
+
 body {
-  @apply text-gray-200;
+  @apply text-gray-200 dark:text-white-100;
 }
 
 .nav-main-content {
@@ -87,41 +108,23 @@ body {
   transform: translateY(0);
 }
 
-#logo_main:focus {
-  outline: 2px solid #37312d;
-  outline-offset: 5px;
-}
-
 .nav-link {
-  @apply inline-block px-1 py-1 mx-1 uppercase text-xs font-semibold text-gray-200 border-b-2 border-white-100 box-border align-middle md:mx-3 md:px-3;
+  @apply inline-block px-1 py-1 mx-1 uppercase text-xs font-semibold text-gray-200 dark:text-white-100 border-b-2 border-white-100 dark:border-gray-200 box-border align-middle md:mx-3 md:px-3;
 }
 
 .nav-link:hover {
   @apply border-b-2 border-pink;
 }
 
-.nav-link:focus {
-  outline: 2px solid #37312d;
-  outline-offset: 5px;
-}
-
 .icon-nav-link {
-  @apply inline-block box-content;
+  @apply inline-block box-content fill-gray-200 dark:fill-white-100;
 
   height: 20px;
   width: 20px;
-  fill: #37312d;
 }
 
 .icon-nav-link:hover {
-  fill: #e4038a;
-}
-
-.icon-nav-link:focus {
-  @apply bg-pink;
-
-  outline: 2px solid #37312d;
-  outline-offset: 5px;
+  @apply fill-pink;
 }
 
 .title {

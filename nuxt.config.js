@@ -28,6 +28,7 @@ export default {
   tailwindcss: {
     viewer: true,
     config: {
+      darkMode: 'class',
       theme: {
         colors: {
           transparent: 'transparent',
