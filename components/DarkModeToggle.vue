@@ -54,6 +54,17 @@ export default {
       isDark: false,
     }
   },
+  mounted() {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      this.isDark = true
+    } else {
+      this.isDark = false
+    }
+  },
   methods: {
     toggleDarkMode() {
       this.isDark = !this.isDark
@@ -62,8 +73,10 @@ export default {
     setDarkMode() {
       if (this.isDark) {
         document.documentElement.classList.add('dark')
+        localStorage.theme = 'dark'
       } else {
         document.documentElement.classList.remove('dark')
+        localStorage.theme = 'light'
       }
     },
   },
