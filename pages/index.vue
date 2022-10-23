@@ -84,7 +84,7 @@ export default {
 }
 
 .project-info {
-  @apply absolute text-sm p-3 text-gray-200 dark:text-white-100 bg-gradient-to-b from-white-100 to-transparent top-0 left-0 right-0 md:bg-none md:relative md:w-1/2 md:px-6 md:py-0;
+  @apply absolute text-sm p-3 text-gray-200 dark:text-white-100 bg-gradient-to-b from-white-100 to-transparent dark:from-gray-200 top-0 left-0 right-0 md:bg-none md:relative md:w-1/2 md:px-6 md:py-0;
 }
 
 .tag {
