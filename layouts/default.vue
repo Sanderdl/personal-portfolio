@@ -20,7 +20,7 @@
             >
               <img
                 class="block mb-4 md:inline-block"
-                style="height: 20px; width: 146px"
+                style="height: 20px; width: 146px; filter: brightness(1)"
                 height="20"
                 width="146"
                 src="~/assets/logo.svg"
@@ -31,7 +31,7 @@
           <div class="mx-auto md:ml-auto md:mr-0">
             <ul class="flex">
               <li>
-                <NuxtLink class="nav-link" to="/">Contact</NuxtLink>
+                <NuxtLink class="nav-link" to="/contact">Contact</NuxtLink>
               </li>
               <li>
                 <NuxtLink class="nav-link" to="/">Blog</NuxtLink>
@@ -92,7 +92,11 @@ export default {
 
 <style lang="postcss">
 *:focus-visible {
-  @apply outline-2 outline-pink outline-offset-4;
+  @apply outline outline-2 outline-pink outline-offset-4;
+}
+
+img {
+  @apply dark:brightness-75;
 }
 
 body {
