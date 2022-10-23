@@ -20,7 +20,7 @@
             >
               <img
                 class="block mb-4 md:inline-block"
-                style="height: 20px; width: 146px"
+                style="height: 20px; width: 146px; filter: brightness(1)"
                 height="20"
                 width="146"
                 src="~/assets/logo.svg"
@@ -93,6 +93,10 @@ export default {
 <style lang="postcss">
 *:focus-visible {
   @apply outline outline-2 outline-pink outline-offset-4;
+}
+
+img {
+  @apply dark:brightness-75;
 }
 
 body {

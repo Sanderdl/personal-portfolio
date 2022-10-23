@@ -35,7 +35,7 @@
               />
             </picture>
             <div class="project-info">
-              <header class="bold-title">{{ project.title }}</header>
+              <h3 class="bold-title">{{ project.title }}</h3>
               <p class="mb-4">{{ project.description }}</p>
               <div>
                 <span v-for="tag of project.tags" :key="tag" class="tag">{{
@@ -88,7 +88,7 @@ export default {
 }
 
 .tag {
-  @apply p-2 m-1 bg-white-100 text-xs inline-block border-pink border text-pink rounded-2xl leading-3;
+  @apply p-2 m-1 bg-white-100 dark:bg-gray-200 text-xs inline-block border-pink border text-pink rounded-2xl leading-3;
 }
 
 .tag:first-child {
