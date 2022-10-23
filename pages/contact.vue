@@ -3,7 +3,12 @@
     <section id="main_content">
       <h1>Contact</h1>
       <p>Ik ben op het momenteel niet opzoek naar een andere baan!</p>
-      <form class="pt-8 w-full max-w-2xl" netlify>
+      <form
+        class="pt-8 w-full max-w-2xl"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+      >
         <label for="name">Naam</label>
         <input
           id="name"
