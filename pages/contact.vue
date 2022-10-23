@@ -6,9 +6,12 @@
       <form
         class="pt-8 w-full max-w-2xl"
         name="contact"
+        action="/"
         method="POST"
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value="ask-question" />
         <label for="name">Naam</label>
         <input
           id="name"
